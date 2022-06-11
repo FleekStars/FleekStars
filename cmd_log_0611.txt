@@ -1,0 +1,114 @@
+C:\Firebase\FleekStars>firebase init
+
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Firebase\FleekStars
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+? Are you ready to proceed? Yes
+? Which Firebase features do you want to set up for this directory? Press Space to select features, then Enter to confir
+m your choices. Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys
+
+=== Account Setup
+
+Which account do you want to use for this project? Choose an account or add a new one now
+
+? Please select an option: fleekstarska@gmail.com
+
++  Using account: fleekstarska@gmail.com
+
+=== Project Setup
+
+First, let's associate this project directory with a Firebase project.
+You can create multiple project aliases by running firebase use --add,
+but for now we'll just set up a default project.
+
+? Please select an option: Use an existing project
+? Select a default Firebase project for this directory: fleekstars (FleekStars)
+i  Using project fleekstars (FleekStars)
+
+=== Hosting Setup
+
+Your public directory is the folder (relative to your project directory) that
+will contain Hosting assets to be uploaded with firebase deploy. If you
+have a build process for your assets, use your build's output directory.
+
+? What do you want to use as your public directory? ./public
+? Configure as a single-page app (rewrite all urls to /index.html)? Yes
+? Set up automatic builds and deploys with GitHub? No
++  Wrote ./public/index.html
+
+i  Writing configuration info to firebase.json...
+i  Writing project information to .firebaserc...
+i  Writing gitignore file to .gitignore...
+
++  Firebase initialization complete!
+
+C:\Firebase\FleekStars>firebase emulators:start
+i  emulators: Starting emulators: hosting
+i  hosting: Serving hosting files from: ./public
++  hosting: Local server: http://localhost:5000
+!  emulators: The Emulator UI requires a project ID to start. Configure your default project with 'firebase use' or pass the --project flag.
+
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+└─────────────────────────────────────────────────────────────┘
+
+┌──────────┬────────────────┐
+│ Emulator │ Host:Port      │
+├──────────┼────────────────┤
+│ Hosting  │ localhost:5000 │
+└──────────┴────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: None
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+
+i  hosting: 127.0.0.1 - - [10/Jun/2022:23:13:51 +0000] "GET / HTTP/1.1" 200 4596 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36"
+i  hosting: 127.0.0.1 - - [10/Jun/2022:23:13:51 +0000] "GET /__/firebase/9.8.3/firebase-app-compat.js HTTP/1.1" 200 27683 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36"
+i  hosting: 127.0.0.1 - - [10/Jun/2022:23:13:51 +0000] "GET /__/firebase/9.8.3/firebase-auth-compat.js HTTP/1.1" 200 124566 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36"
+i  hosting: 127.0.0.1 - - [10/Jun/2022:23:13:51 +0000] "GET /__/firebase/9.8.3/firebase-functions-compat.js HTTP/1.1" 200 8116 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36"
+i  hosting: 127.0.0.1 - - [10/Jun/2022:23:13:51 +0000] "GET /__/firebase/9.8.3/firebase-messaging-compat.js HTTP/1.1" 200 37957 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36"
+i  hosting: 127.0.0.1 - - [10/Jun/2022:23:13:51 +0000] "GET /__/firebase/9.8.3/firebase-analytics-compat.js HTTP/1.1" 200 25599 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36"
+i  hosting: 127.0.0.1 - - [10/Jun/2022:23:13:51 +0000] "GET /__/firebase/9.8.3/firebase-storage-compat.js HTTP/1.1" 200 38245 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36"
+i  hosting: 127.0.0.1 - - [10/Jun/2022:23:13:51 +0000] "GET /__/firebase/init.js?useEmulator=true HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36"
+i  hosting: 127.0.0.1 - - [10/Jun/2022:23:13:51 +0000] "GET /__/firebase/9.8.3/firebase-database-compat.js HTTP/1.1" 200 165702 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36"
+i  hosting: 127.0.0.1 - - [10/Jun/2022:23:13:51 +0000] "GET /__/firebase/9.8.3/firebase-firestore-compat.js HTTP/1.1" 200 313599 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36"
+i  hosting: 127.0.0.1 - - [10/Jun/2022:23:13:51 +0000] "GET /__/firebase/9.8.3/firebase-remote-config-compat.js HTTP/1.1" 200 27301 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36"
+i  hosting: 127.0.0.1 - - [10/Jun/2022:23:13:52 +0000] "GET /__/firebase/9.8.3/firebase-performance-compat.js HTTP/1.1" 200 30702 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36"
+i  hosting: 127.0.0.1 - - [10/Jun/2022:23:13:52 +0000] "GET /favicon.ico HTTP/1.1" 200 4596 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36"
+i  hosting: 127.0.0.1 - - [10/Jun/2022:23:14:46 +0000] "GET / HTTP/1.1" 200 433 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36"
+i  hosting: 127.0.0.1 - - [10/Jun/2022:23:14:46 +0000] "GET /favicon.ico HTTP/1.1" 304 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36"
+
+i  emulators: Received SIGINT (Ctrl-C) for the first time. Starting a clean shutdown.
+i  emulators: Please wait for a clean shutdown or send the SIGINT (Ctrl-C) signal again to stop right now.
+i  emulators: Shutting down emulators.
+i  hosting: Stopping Hosting Emulator
+i  hub: Stopping emulator hub
+
+C:\Firebase\FleekStars>firebase deploy --only hosting
+
+=== Deploying to 'fleekstars'...
+
+i  deploying hosting
+i  hosting[fleekstars]: beginning deploy...
+i  hosting[fleekstars]: found 2 files in ./public
++  hosting[fleekstars]: file upload complete
+i  hosting[fleekstars]: finalizing version...
++  hosting[fleekstars]: version finalized
+i  hosting[fleekstars]: releasing new version...
++  hosting[fleekstars]: release complete
+
++  Deploy complete!
+
+Project Console: https://console.firebase.google.com/project/fleekstars/overview
+Hosting URL: https://fleekstars.web.app
