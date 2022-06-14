@@ -1,0 +1,71 @@
+
+
+<div class="container-fluid" style="min-height: 750px">
+    <div class="row">
+        <!-- control buttons -->
+        <div class="col-6">
+            <!-- header -->
+            <div class="row mt-3">
+                <hr>
+                <h2 class="ms-3">Tags</h2>
+                <hr>    
+            </div>
+
+            <!-- buttons -->
+            <div class="row">
+                <div class="col-auto"> 
+                    <button *ngFor="let availableTag of availableTags" type="button" class="col-auto mx-3 btn btn-primary" (click)="addTag(availableTag)"> {{availableTag}} </button>
+                </div>
+            </div>
+
+            <!-- add attributes -->
+            <div *ngIf='selectedTag' class="row mt-4">
+                <div class="col">
+                    <!-- header -->
+                    <div class="row">
+                        <hr>
+                        <h2 class="ms-3">Selected Tag</h2>
+                        <hr>
+                    </div>
+                    <!-- attribute input UI -->
+                    <div class="row">
+                        <div class="col">
+                            <div *ngFor="let attribute of attributes[selectedTag]" class="row">
+                                <div class="col-6">{{attribute}}</div>
+                                <div *ngIf="attribute != 'style'" class="col-6">
+                                    <input type="text">
+                                </div>
+
+                                <div *ngIf="attribute == 'style'" class="col-6">
+                                    <div *ngFor="let styleAttribute of styleAttributes" class="row">
+                                        <div class="col-6">{{styleAttribute}}</div>
+                                        <div class="col-6"><input type="text"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Input -->
+                    <div class="row mt-3">
+                        <div class="col-9"></div>
+                        <div class="col-3">
+                            <button type="button" class="col-auto mx-3 btn btn-success"> insert tag --> </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- code editor -->
+        <div class="col-6">
+            <ngx-codemirror #codemirror
+                [options]="codeMirrorOptions"
+                [(ngModel)]="content">
+            </ngx-codemirror>
+        </div>
+
+    </div>
+    
+</div>
+
